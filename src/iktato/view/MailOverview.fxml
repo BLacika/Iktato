@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="613.0" prefWidth="1024.0" style="-fx-background-color: #eee;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iktato.view.MailOverview">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Iktatóprogram" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txSearch" layoutX="14.0" layoutY="64.0" prefHeight="26.0" prefWidth="442.0" promptText="Keresés" AnchorPane.leftAnchor="10.0" />
+      <TableView fx:id="mailTable" layoutX="14.0" layoutY="100.0" prefHeight="498.0" prefWidth="1218.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="105.0">
+        <columns>
+          <TableColumn fx:id="colNumber" prefWidth="103.19997882843018" text="Száma" />
+            <TableColumn fx:id="colDate" prefWidth="150.40003967285156" text="Dátum" />
+          <TableColumn fx:id="colFrom" prefWidth="204.00003051757812" text="Honnan" />
+            <TableColumn fx:id="colWhat" prefWidth="220.79998779296875" text="Mi" />
+            <TableColumn fx:id="colName" minWidth="8.7999267578125" prefWidth="194.39990234375" text="Név" />
+            <TableColumn fx:id="colID" prefWidth="124.800048828125" text="Törzs szám" />
+        </columns>
+      </TableView>
+      <Button fx:id="btNew" layoutX="601.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleNewButton" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #1ead1a;" text="Új" AnchorPane.rightAnchor="210.0" />
+      <Button fx:id="btEdit" layoutX="698.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #f7b022;" text="Módosít" AnchorPane.rightAnchor="110.0" />
+      <Button fx:id="btDelete" layoutX="795.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #ff0000;" text="Töröl" AnchorPane.rightAnchor="10.0" />
+      <Line endX="900.2000122070312" endY="-7.62939453125E-6" layoutX="111.0" layoutY="48.0" startX="-100.0" />
+   </children>
+</AnchorPane>
